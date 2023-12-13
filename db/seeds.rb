@@ -14,15 +14,6 @@ students_data.each do |student_data|
 end
 
 
-grade_infos_data = [
-  { grade: 'A', operator: '>=', total_score: 340 },
-  { grade: 'B', operator: '>=', total_score: 300 },
-  { grade: 'C', operator: '<', total_score: 300 },
-]
-
-grade_infos_data.each do |grade_info_data|
-  GradeInfo.create(grade_info_data)
-end
 
 
 student_scores_data = [

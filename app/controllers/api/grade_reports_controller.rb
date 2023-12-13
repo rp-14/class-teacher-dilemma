@@ -68,7 +68,7 @@ module Api
 
       respond_to do |format|
         format.json { render json: @grade_report }
-        format.html # Render index.html.erb with optimized data
+        format.html
       end
     end
   end
