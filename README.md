@@ -1,24 +1,85 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+```markdown
+# Class Teacher Dilemma
 
-* Ruby version
+This is a School Management System built with Ruby on Rails.
 
-* System dependencies
+## Prerequisites
 
-* Configuration
+Before you start, make sure you have the following installed on your machine:
 
-* Database creation
+- Ruby 3.1.2
+- Rails 7.1.2
+- Git
 
-* Database initialization
+## Installation
 
-* How to run the test suite
+1. Clone this repository:
 
-* Services (job queues, cache servers, search engines, etc.)
+   ```bash
+   git clone https://github.com/your-username/school-management-system.git
+   ```
 
-* Deployment instructions
+2. Navigate to the project directory:
 
-* ...
+   ```bash
+   cd class-teacher-dilemma
+   ```
+
+3. Install gems:
+
+   ```bash
+   bundle install
+   ```
+
+4. Run migrations:
+
+   ```bash
+   rails db:migrate
+   ```
+
+5. Seed the database with dummy data:
+
+   ```bash
+   rails db:seed
+   ```
+
+## Usage
+
+To start the Rails server, run:
+
+```bash
+rails s -p 3000
+```
+
+Replace `3000` with the desired port.
+
+### Routes
+
+#### Student-related Routes:
+
+- Index of all students: http://localhost:3000/students
+- Show details of a specific student: http://localhost:3000/students/:id
+- Form to create a new student: http://localhost:3000/students/new
+- Create a new student: POST to http://localhost:3000/students
+- Form to edit a specific student: http://localhost:3000/students/:id/edit
+- Update a specific student: PATCH or PUT to http://localhost:3000/students/:id
+- Delete a specific student: DELETE to http://localhost:3000/students/:id
+
+#### Scorecard-related Routes:
+
+- Scorecard of all students: http://localhost:3000/api/scorecards
+
+#### Grade Report-related Routes:
+
+- Grade report of all students: http://localhost:3000/api/grade_reports
+
+#### Student Score Details:
+
+- Show student score details: http://localhost:3000/student_score
+
+
+
+```
+
