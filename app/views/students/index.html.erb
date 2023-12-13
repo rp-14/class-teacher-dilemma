@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    table.student-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table.student-table th, table.student-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    table.student-table th {
+      background-color: #f2f2f2;
+    }
+
+    table.student-table td:last-child {
+      text-align: center;
+    }
+
+    table.student-table a {
+      color: #007bff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    table.student-table a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Student List</h1>
+
+  <table class="student-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th colspan="3">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.id %></td>
+          <td><%= student.first_name %></td>
+          <td><%= student.last_name %></td>
+          <td><%= link_to 'Show', student %></td>
+          <td><%= link_to 'Edit', edit_student_path(student) %></td>
+          <td>
+            <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</body>
+</html>

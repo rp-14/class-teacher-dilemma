@@ -1,0 +1,65 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+</style>
+
+<h1>Student Scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Subject 1</th>
+      <th>Subject 2</th>
+      <th>Subject 3</th>
+      <th>Subject 4</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @student_score.each do |student_score| %>
+      <tr>
+        <td><%= student_score.student_id %></td>
+        <td><%= student_score.subject1 %></td>
+        <td><%= student_score.subject2 %></td>
+        <td><%= student_score.subject3 %></td>
+        <td><%= student_score.subject4 %></td>
+        <td>
+          <%= link_to 'Show', student_score %>
+          <%= link_to 'Edit', edit_student_score_path(student_score) %>
+          <%= link_to 'Destroy', student_score, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Student Score', new_student_score_path %>

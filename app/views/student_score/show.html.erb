@@ -1,0 +1,54 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+</style>
+
+<h1>Student Score</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Student ID</th>
+    <th>Subject 1</th>
+    <th>Subject 2</th>
+    <th>Subject 3</th>
+    <th>Subject 4</th>
+  </tr>
+
+  <tr>
+    <td><%= @student_score.id %></td>
+    <td><%= @student_score.student_id %></td>
+    <td><%= @student_score.subject1 %></td>
+    <td><%= @student_score.subject2 %></td>
+    <td><%= @student_score.subject3 %></td>
+    <td><%= @student_score.subject4 %></td>
+  </tr>
+</table>
+
+<br>
+
+<%= link_to 'Back', student_score_path, class: 'action-link'%>

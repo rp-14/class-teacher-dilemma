@@ -1,0 +1,51 @@
+<style>
+  .student-details {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .student-details th, .student-details td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  .student-details th {
+    width: 30%;
+    background-color: #f2f2f2;
+  }
+
+  .action-link {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+
+  .action-link:hover {
+    background-color: #f2f2f2;
+  }
+</style>
+
+<h1>Student Details</h1>
+
+<table class="student-details">
+  <tr>
+    <th>ID</th>
+    <td><%= @student.id %></td>
+  </tr>
+  <tr>
+    <th>First Name</th>
+    <td><%= @student.first_name %></td>
+  </tr>
+  <tr>
+    <th>Last Name</th>
+    <td><%= @student.last_name %></td>
+  </tr>
+</table>
+
+<%= link_to 'Back', students_path, class: 'action-link' %>
+<%= link_to 'Edit', edit_student_path(@student), class: 'action-link' %>
+<%= link_to 'Destroy', @student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'action-link' %>

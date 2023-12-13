@@ -1,0 +1,27 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+
+  a {
+    color: #1e88e5;
+    text-decoration: none;
+  }
+</style>
+
+<h1>Destroy Student Score</h1>
+
+<p>Are you sure you want to destroy this student score?</p>
+
+<%= link_to 'Back', student_score_path %> |
+<%= link_to 'Destroy', @student_score, method: :delete, data: { confirm: 'Are you sure?' } %>
