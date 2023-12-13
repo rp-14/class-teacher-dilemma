@@ -1,0 +1,69 @@
+<!-- app/views/api/scorecards/index.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scorecards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Scorecards</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Subject 1</th>
+        <th>Subject 2</th>
+        <th>Subject 3</th>
+        <th>Subject 4</th>
+        <th>Grand Total</th>
+        <th>Grade</th>
+        <th>Average Compare</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @scorecards.each do |scorecard| %>
+        <tr>
+          <td><%= scorecard['id'] %></td>
+          <td><%= "#{scorecard['first_name']} #{scorecard['last_name']}" %></td>
+          <td><%= scorecard['subject1'] %></td>
+          <td><%= scorecard['subject2'] %></td>
+          <td><%= scorecard['subject3'] %></td>
+          <td><%= scorecard['subject4'] %></td>
+          <td><%= scorecard['grand_total'] %></td>
+          <td><%= scorecard['grade'] %></td>
+          <td><%= scorecard['average_compare'] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</body>
+</html>
