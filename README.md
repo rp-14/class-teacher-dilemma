@@ -18,7 +18,7 @@ Before you start, make sure you have the following installed on your machine:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/school-management-system.git
+   git clone https://github.com/rp-14/class-teacher-dilemma.git
    ```
 
 2. Navigate to the project directory:
