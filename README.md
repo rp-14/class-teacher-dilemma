@@ -57,15 +57,7 @@ Replace `3000` with the desired port.
 
 ### Routes
 
-#### Student-related Routes:
 
-- Index of all students: http://localhost:3000/students
-- Show details of a specific student: http://localhost:3000/students/:id
-- Form to create a new student: http://localhost:3000/students/new
-- Create a new student: POST to http://localhost:3000/students
-- Form to edit a specific student: http://localhost:3000/students/:id/edit
-- Update a specific student: PATCH or PUT to http://localhost:3000/students/:id
-- Delete a specific student: DELETE to http://localhost:3000/students/:id
 
 #### Scorecard-related Routes:
 
@@ -75,11 +67,15 @@ Replace `3000` with the desired port.
 
 - Grade report of all students: http://localhost:3000/api/grade_reports
 
-#### Student Score Details:
+#### Student-related Routes:
 
-- Show student score details: http://localhost:3000/student_score
-
-
+- Index of all students: http://localhost:3000/students
+- Show details of a specific student: http://localhost:3000/students/:id
+- Form to create a new student: http://localhost:3000/students/new
+- Create a new student: POST to http://localhost:3000/students
+- Form to edit a specific student: http://localhost:3000/students/:id/edit
+- Update a specific student: PATCH or PUT to http://localhost:3000/students/:id
+- Delete a specific student: DELETE to http://localhost:3000/students/:id
 
 ```
 
